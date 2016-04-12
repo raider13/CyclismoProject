@@ -119,8 +119,8 @@ public class BushidoTargetSlopeModel extends AbstractBushidoModel {
 		if (slope > SLOPE_MAX) {
 			return SLOPE_MAX;
 		}
-		if (slope < -SLOPE_MIN) {
-			return -SLOPE_MIN;
+		if (slope < SLOPE_MIN) {
+			return SLOPE_MIN;
 		}
 		return slope;
 	}

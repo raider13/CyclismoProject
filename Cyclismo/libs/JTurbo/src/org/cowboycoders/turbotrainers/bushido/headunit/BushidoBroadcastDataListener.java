@@ -53,7 +53,7 @@ public class BushidoBroadcastDataListener implements BroadcastListener<Broadcast
             data = message.getData();
             if (arrayStartsWith(PARTIAL_PACKET_SPEED_POWER_CADENCE, data)) {
                 // speed in km/h
-                speed = ((unsignedData [2] << 8) + unsignedData [3]) / 10;
+                speed = ((unsignedData [2] << 8) + unsignedData [3]) / 10.0;
                 power = (unsignedData [4] << 8) + unsignedData [5];
                 cadence = unsignedData [6];
                 bushidoListener.onSpeedChange(speed);
